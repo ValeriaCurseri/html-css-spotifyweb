@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
 /* SFONDI */
 
 .bg-black{
@@ -18,28 +24,41 @@
     background-color: #282828;
 }
 
+.bg-green {
+    background: rgb(100,121,9);
+    background: linear-gradient(135deg, rgba(100,121,9,1) 39%, rgba(2,0,36,1) 100%);
+}
+
 /* STRUTTURA */
 
-/* FORSE NON SERVE .vc_corpo {
-    display:flex;
-} */
+.vc_corpo {
+   display:flex;
+}
 
 aside {
     height:100vh;
-    width:60px;
+    flex: 0 0 60px;
+}
+
+.vc_corpo > .container {
+    height:100%;
+    flex: 0 0 calc(100vw - 60px);
 }
 
 header {
+    flex: 1 0;
+    height:80px;
 
 }
 
 main {
-
+    flex: 1 0;
+    height: calc(100vh - 80px);
 }
 
 .player {
-    height:100px;
-    width:100%;
+    height:70px;
+    width:100vw;
     position:fixed;
     bottom:0;
     right:0;
@@ -50,7 +69,12 @@ main {
 /* MEDIA QUERIES */
 
 @media screen and (min-width:768px) { /* SM */
-
+    aside {
+        flex: 0 0 150px;
+    }
+    .vc_corpo > .container {
+        flex: 0 0 calc(100vw - 150px);
+    }
 }
 
 @media screen and (min-width:992px) { /* MD */
