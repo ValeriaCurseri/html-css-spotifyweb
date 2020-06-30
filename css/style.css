@@ -20,12 +20,13 @@
 
 /* STRUTTURA */
 
-.vc_corpo {
+/* FORSE NON SERVE .vc_corpo {
     display:flex;
-}
+} */
 
 aside {
-    height
+    height:100vh;
+    width:60px;
 }
 
 header {
@@ -37,7 +38,25 @@ main {
 }
 
 .player {
-    height:60px;
+    height:100px;
     width:100%;
-    display
+    position:fixed;
+    bottom:0;
+    right:0;
+    z-index:1;
+    display:flex;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width:768px) { /* SM */
+
+}
+
+@media screen and (min-width:992px) { /* MD */
+
+}
+
+@media screen and (min-width:1200px) { /* LG */
+
 }
