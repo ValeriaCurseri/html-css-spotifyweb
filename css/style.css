@@ -1,0 +1,43 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+/* SFONDI */
+
+.bg-black{
+    background-color: #000;
+}
+
+.bg-darkgrey{
+    background-color: #080b12;
+}
+
+.bg-grey{
+    background-color: #282828;
+}
+
+/* STRUTTURA */
+
+.vc_corpo {
+    display:flex;
+}
+
+aside {
+    height
+}
+
+header {
+
+}
+
+main {
+
+}
+
+.player {
+    height:60px;
+    width:100%;
+    display
+}
