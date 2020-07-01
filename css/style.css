@@ -31,49 +31,46 @@
 
 /* STRUTTURA */
 
-.vc_corpo {
-   display:flex;
-}
-
 aside {
     height:100vh;
-    flex: 0 0 60px;
-}
-
-.vc_corpo > .container {
-    height:100%;
-    flex: 0 0 calc(100vw - 60px);
+    width:60px;
+    float:left;
 }
 
 header {
-    flex: 1 0;
     height:80px;
-
+    width:calc(100% - 60px);
+    float:left;
 }
 
 main {
-    flex: 1 0;
     height: calc(100vh - 80px);
+    width: calc(100% - 60px);
+    float:left;
 }
 
 .player {
     height:70px;
-    width:100vw;
+    width:100%;
     position:fixed;
     bottom:0;
     right:0;
     z-index:1;
-    display:flex;
 }
 
 /* MEDIA QUERIES */
 
 @media screen and (min-width:768px) { /* SM */
     aside {
-        flex: 0 0 150px;
+        width:150px;
     }
-    .vc_corpo > .container {
-        flex: 0 0 calc(100vw - 150px);
+
+    header {
+        width:calc(100% - 150px);
+    }
+
+    main {
+        width: calc(100% - 150px);
     }
 }
 
