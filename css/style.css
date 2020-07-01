@@ -57,18 +57,41 @@ aside {
 }
 
 #logo {
+    padding:10px;
+}
+
+#logo #mobile {
     width:100%;
-    padding:20px;
+    background: #fff;
+    border-radius: 1000px;
+    border-color: #000;
+}
+
+#logo #display {
+    display:none;
+}
+
+aside span {
+    display:none;
 }
 
 aside > nav > ul {
     list-style: none;
 }
 
+aside > nav > ul > li {
+    display:flex;
+    justify-content: center;
+}
+
+aside > nav > ul > li > a > i {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
 aside > nav > ul > li > a {
     color:grey;
     text-decoration: none;
-    padding-left:20px;
 }
 
 aside > nav > ul > li:hover a {
@@ -83,41 +106,8 @@ aside > nav > ul > li:active a {
     color:#fff;
 }
 
-aside > nav > ul > li > a > i{
-    margin-right:5px;
-    vertical-align: middle;
-}
-
-aside > nav > ul > li > a > i.fa-grip-lines-vertical:first-child {
-    margin-right:0;
-}
-
-aside > nav > ul > li > a > span, aside > .playlist > span {
-    font-size: 12px;
-    line-height: 30px;
-}
-
-aside > .playlist > span {
-    display:block;
-}
-
 aside > .playlist {
-    text-transform: capitalize;
-    padding:20px;
-}
-
-aside > .playlist > .crea-playlist {
-    padding:10px 0;
-}
-
-aside > .playlist > .crea-playlist > i + span{
-    font-size: 15px;
-}
-
-aside > .playlist > .crea-playlist > i {
-    font-size: 30px;
-    vertical-align: middle;
-    padding-right: 5px;
+    display:none;
 }
 
 aside > .account {
@@ -270,17 +260,90 @@ main {
 /* MEDIA QUERIES */
 
 @media screen and (min-width:768px) { /* SM */
+    /* inizio aside */
+
     aside {
         width:200px;
     }
+
+    #logo {
+        padding:20px;
+    }
+
+    #logo #mobile {
+        display:none;
+    }
+
+    #logo #display {
+        display:block;
+        width:100%;
+    }
+
+    aside span {
+        display: inline-block;
+    }
+
+    aside > nav > ul > li {
+        display:block;
+    }
+
+    aside > nav > ul > li > a {
+        padding-left:20px;
+    }
+
+    aside > nav > ul > li > a > i{
+        margin-right:5px;
+        vertical-align: middle;
+    }
+
+    aside > nav > ul > li > a > i.fa-grip-lines-vertical:first-child {
+        margin-right:0;
+    }
+
+    aside > nav > ul > li > a > span, aside > .playlist > span {
+        font-size: 12px;
+        line-height: 30px;
+    }
+
+    aside > .playlist {
+        display:block;
+    }
+
+    aside > .playlist > span {
+        display:block;
+    }
+
+    aside > .playlist {
+        text-transform: capitalize;
+        padding:20px;
+    }
+
+    aside > .playlist > .crea-playlist {
+        padding:10px 0;
+    }
+
+    aside > .playlist > .crea-playlist > i + span{
+        font-size: 15px;
+    }
+
+    aside > .playlist > .crea-playlist > i {
+        font-size: 30px;
+        vertical-align: middle;
+        padding-right: 5px;
+    }
+
+    /* inizio header */
 
     header {
         width:calc(100% - 200px);
     }
 
+    /* inizio main */
+
     main {
         width: calc(100% - 200px);
     }
+
 }
 
 @media screen and (min-width:992px) { /* MD */
