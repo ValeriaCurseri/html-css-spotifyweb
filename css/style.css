@@ -75,16 +75,8 @@ main {
 }
 
 .player-left, .player-right {
-    flex: 1 0 20%;
-}
-
-.player-center {
-    flex: 4 0 60%;
-}
-
-.player > .player-left > div {
-    float:left;
-    border: 1px solid red;
+    flex: 1 0 25%;
+    justify-content: space-around;
 }
 
 .player > .player-left > .copertina > img {
@@ -94,6 +86,60 @@ main {
 .player > .player-left > .dati, .player > .player-left > .icone {
     display:flex;
     flex-direction: column;
+}
+
+.player > .player-left > .dati {
+    font-weight: bold;
+}
+
+.player > .player-left > .dati > .titolo, .player > .player-left > .icone {
+    color:grey;
+}
+
+.player > .player-left > .icone > i:not(:last-child) {
+    padding-bottom:5px;
+}
+
+.player-center {
+    flex: 4 0 50%;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.player-center > .comandi {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 20px;
+}
+
+.player-center > .comandi i {
+    padding: 0 10px;
+}
+
+.player-center > .comandi > .comandi-center {
+    font-size: 40px;
+}
+
+.player-center > .comandi > .comandi-center i {
+    padding: 0 30px;
+}
+
+.player-center > .comandi > .comandi-center > .barra-avanzamento {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player-center > .comandi > .comandi-center > .barra-avanzamento > span {
+    flex: 0 0 5%;
+}
+
+.player-center > .comandi > .comandi-center > .barra-avanzamento > progress {
+    flex: 1 1 70px;
+    margin: 0 10px;
 }
 
 /* MEDIA QUERIES */
@@ -119,3 +165,8 @@ main {
 @media screen and (min-width:1200px) { /* LG */
 
 }
+
+/* DA FARE
+- colore progress bar (sfondo e progress)
+- flex nel player
+ */
