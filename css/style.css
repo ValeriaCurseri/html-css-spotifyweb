@@ -31,8 +31,17 @@
 
 /* TIPOGRAFIA */
 
-h1, h2, h3, h4, h5, h6, p, span, button {
+h1, h2, h3, h4, h5, h6, p, span, button, a {
     font-family: 'Manrope', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color:#fff;
+}
+
+h4 {
+    text-transform: uppercase;
+    font-size: 15px;
 }
 
 /* STRUTTURA */
@@ -40,15 +49,104 @@ h1, h2, h3, h4, h5, h6, p, span, button {
 /* inizio aside */
 
 aside {
-    height:100vh;
+    height:calc(100vh - 70px);
     width:60px;
     float:left;
-    color:#fff;
-    padding:20px;
+    color:grey;
+    position:relative;
 }
 
 #logo {
     width:100%;
+    padding:20px;
+}
+
+aside > nav > ul {
+    list-style: none;
+}
+
+aside > nav > ul > li > a {
+    color:grey;
+    text-decoration: none;
+    padding-left:20px;
+}
+
+aside > nav > ul > li:hover a {
+    color:#fff;
+}
+
+aside > nav > ul > li:active {
+    border-left:2px solid #35ff14;
+}
+
+aside > nav > ul > li:active a {
+    color:#fff;
+}
+
+aside > nav > ul > li > a > i{
+    margin-right:5px;
+    vertical-align: middle;
+}
+
+aside > nav > ul > li > a > i.fa-grip-lines-vertical:first-child {
+    margin-right:0;
+}
+
+aside > nav > ul > li > a > span, aside > .playlist > span {
+    font-size: 12px;
+    line-height: 30px;
+}
+
+aside > .playlist > span {
+    display:block;
+}
+
+aside > .playlist {
+    text-transform: capitalize;
+    padding:20px;
+}
+
+aside > .playlist > .crea-playlist {
+    padding:10px 0;
+}
+
+aside > .playlist > .crea-playlist > i + span{
+    font-size: 15px;
+}
+
+aside > .playlist > .crea-playlist > i {
+    font-size: 30px;
+    vertical-align: middle;
+    padding-right: 5px;
+}
+
+aside > .account {
+    position:absolute;
+    bottom:0;
+    padding:20px;
+}
+
+aside > .account i {
+    margin-right:10px;
+    vertical-align: middle;
+}
+
+aside > .account > .installa {
+    width:160px;
+    border-bottom: 1px solid;
+    font-size: 12px;
+    line-height: 30px;
+}
+
+aside > .account > .profilo {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 40px;
+    color:#fff;
+}
+
+aside > .account > .profilo > i {
+    font-size: 20px;
 }
 
 /* inizio header */
@@ -75,7 +173,7 @@ header > button {
 /* inizio main */
 
 main {
-    height: calc(100vh - 80px);
+    height: calc(100vh - 150px);
     width: calc(100% - 60px);
     float:left;
 }
@@ -173,15 +271,15 @@ main {
 
 @media screen and (min-width:768px) { /* SM */
     aside {
-        width:150px;
+        width:200px;
     }
 
     header {
-        width:calc(100% - 150px);
+        width:calc(100% - 200px);
     }
 
     main {
-        width: calc(100% - 150px);
+        width: calc(100% - 200px);
     }
 }
 
@@ -196,4 +294,6 @@ main {
 /* DA FARE
 - colore progress bar (sfondo e progress)
 - flex nel player
+- invertire icona back nel player
+- hover
  */
