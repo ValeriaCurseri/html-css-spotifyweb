@@ -165,6 +165,8 @@ header > button {
 main {
     height: calc(100vh - 150px);
     width: calc(100% - 60px);
+    overflow-y: auto;
+    padding-bottom:50px;
 }
 
 main > .navbar {
@@ -175,15 +177,16 @@ main > .navbar {
 main > .navbar > ul {
     display:flex;
     justify-content: center;
-    flex-flow: row;
+    flex-flow: row wrap;
+    flex: 1 1 800px;
 }
 
 main > .navbar > ul > li {
-    flex: 0 0 30%;
     display:flex;
     justify-content: center;
     align-items:center;
     position: relative;
+    padding: 10px 20px;
 }
 
 main > .navbar > ul > li > .linea-active {
@@ -199,22 +202,35 @@ main > .navbar > ul > li:active .linea-active {
     bottom:0;
 }
 
-.dati {
+.bold-white {
     font-weight: bold;
     margin-top:10px;
+    color:#fff;
+    font-size: 16px;
+}
+
+main .raccolte{
+    padding:0 50px;
+}
+
+main .raccolte span{
+    display:block;
+}
+
+.row {
+    margin-top:20px;
 }
 
 .dati span {
     display:block;
 }
 
-main .recently-played .dati > .titolo {
-    color:#fff;
-    font-size: 16px;
-}
-
 main .recently-played .dati > .artista {
     font-size: 12px;
+}
+
+main .raccolte .brano {
+    margin-bottom:20px;
 }
 
 /* inizio player */
@@ -285,6 +301,10 @@ main .recently-played .dati > .artista {
 
 .player-center > .comandi > .comandi-center i {
     padding: 0 30px;
+}
+
+.player-center > .comandi > .comandi-right i.fa-undo-alt {
+    transform: scaleX(-1);
 }
 
 .player-center > .comandi > .comandi-center > .barra-avanzamento {
@@ -417,7 +437,7 @@ main .recently-played .dati > .artista {
 /* DA FARE
 - colore progress bar (sfondo e progress)
 - flex nel player
-- invertire icona back nel player
 - hover
 - flex nella navbar del main
+- cambiare contenuti main
  */
