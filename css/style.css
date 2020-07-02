@@ -44,6 +44,20 @@ h4 {
     font-size: 15px;
 }
 
+li > a {
+    color:darkgrey;
+    font-weight: bold;
+}
+
+/* aside > nav > ul > li:hover a, aside > nav > ul > li:active a, aside > nav > ul > li > a:hover, aside > nav > ul > li > a:active, aside > nav > ul > li > a:focus {
+    color:#fff;
+} */
+
+li:hover a, li:active a, li > a:hover, li > a:active, li > a:focus {
+    color:#fff;
+    text-decoration: none;
+}
+
 /* STRUTTURA */
 
 /* inizio aside */
@@ -89,10 +103,6 @@ aside > nav > ul > li > a {
     text-decoration: none;
 }
 
-aside > nav > ul > li:hover a, aside > nav > ul > li:active a, aside > nav > ul > li > a:hover, aside > nav > ul > li > a:active  {
-    color:#fff;
-}
-
 aside > nav > ul > li:active {
     border-left:2px solid #35ff14;
 }
@@ -122,8 +132,9 @@ aside > .account > .profilo {
     color:#fff;
 }
 
-aside > .account > .profilo > i {
-    font-size: 20px;
+aside > .account > .profilo > img {
+    width: 20px;
+    border-radius: 50%;
 }
 
 /* inizio header */
@@ -150,6 +161,38 @@ header > button {
 main {
     height: calc(100vh - 150px);
     width: calc(100% - 60px);
+}
+
+main > .navbar {
+    display:flex;
+    justify-content: center;
+}
+
+main > .navbar > ul {
+    display:flex;
+    justify-content: center;
+    flex-flow: row;
+}
+
+main > .navbar > ul > li {
+    flex: 0 0 30%;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    position: relative;
+}
+
+main > .navbar > ul > li > .linea-active {
+    display:none;
+}
+
+main > .navbar > ul > li:active .linea-active {
+    display:block;
+    width:30px;
+    height:2px;
+    background-color:#35ff14;
+    position:absolute;
+    bottom:0;
 }
 
 /* inizio player */
@@ -358,4 +401,5 @@ main {
 - flex nel player
 - invertire icona back nel player
 - hover
+- flex nella navbar del main
  */
