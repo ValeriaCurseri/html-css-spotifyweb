@@ -114,16 +114,12 @@ aside > .account {
     position:absolute;
     bottom:0;
     padding:20px;
-}
-
-aside > .account i {
-    margin-right:10px;
-    vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 aside > .account > .installa {
-    width:160px;
-    border-bottom: 1px solid;
     font-size: 12px;
     line-height: 30px;
 }
@@ -294,6 +290,8 @@ main {
     aside > nav > ul > li > a > i{
         margin-right:5px;
         vertical-align: middle;
+        font-size: 20px;
+        margin-bottom:0;
     }
 
     aside > nav > ul > li > a > i.fa-grip-lines-vertical:first-child {
@@ -330,6 +328,20 @@ main {
         font-size: 30px;
         vertical-align: middle;
         padding-right: 5px;
+    }
+
+    aside > .account {
+        display: block;
+    }
+    
+    aside > .account i {
+        margin-right:10px;
+        vertical-align: middle;
+    }
+
+    aside > .account > .installa {
+        width:160px;
+        border-bottom: 1px solid;
     }
 
     /* inizio header */
