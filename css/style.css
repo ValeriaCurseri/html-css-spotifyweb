@@ -14,19 +14,23 @@
 
 .bg-black{
     background-color: #000;
+    color:darkgrey;
 }
 
 .bg-darkgrey{
     background-color: #080b12;
+    color:#fff;
 }
 
 .bg-grey{
     background-color: #282828;
+    color:#fff;
 }
 
 .bg-green {
     background: rgb(100,121,9);
     background: linear-gradient(135deg, rgba(100,121,9,1) 39%, rgba(2,0,36,1) 100%);
+    color:darkgrey;
 }
 
 /* TIPOGRAFIA */
@@ -195,6 +199,24 @@ main > .navbar > ul > li:active .linea-active {
     bottom:0;
 }
 
+.dati {
+    font-weight: bold;
+    margin-top:10px;
+}
+
+.dati span {
+    display:block;
+}
+
+main .recently-played .dati > .titolo {
+    color:#fff;
+    font-size: 16px;
+}
+
+main .recently-played .dati > .artista {
+    font-size: 12px;
+}
+
 /* inizio player */
 
 .player {
@@ -228,10 +250,6 @@ main > .navbar > ul > li:active .linea-active {
 .player > .player-left > .dati, .player > .player-left > .icone {
     display:flex;
     flex-direction: column;
-}
-
-.player > .player-left > .dati {
-    font-weight: bold;
 }
 
 .player > .player-left > .dati > .titolo, .player > .player-left > .icone {
