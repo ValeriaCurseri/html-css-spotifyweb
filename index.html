@@ -4,25 +4,26 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Spotify</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <div class="container clearfix">
-            <aside class="bg-black">
+        <div class="vc_container clearfix">
+            <aside class="bg-black pull-left">
                 <div id="logo">
                     <img id="display" src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_White.png" alt="logo spotify">
                     <img id="mobile" src="https://image.flaticon.com/icons/png/512/8/8729.png" alt="logo spotify">
                 </div>
                 <nav>
-                    <ul>
+                    <ul class="list-unstyled">
                         <li><a class"active" href="#"><i class="fas fa-home"></i><span>Home</span></a></li>
                         <li><a href="#"><i class="fas fa-search"></i><span>Cerca</span></a></li>
                         <li><a href="#"><i class="fas fa-grip-lines-vertical"></i><i class="fas fa-grip-lines-vertical"></i><span>La tua libreria</span></a></li>
                     </ul>
                 </nav>
-                <div class="playlist">
+                <div class="playlist text-capitalize">
                     <h4>playlist</h4>
                     <div class="crea-playlist">
                         <i class="fas fa-plus-square"></i>
@@ -45,11 +46,20 @@
                     </div>
                 </div>
             </aside>
-            <header class="bg-darkgrey">
-                <button>effettua l'upgrade</button>
+            <header class="bg-darkgrey pull-left">
+                <button class="text-uppercase">effettua l'upgrade</button>
             </header>
-            <main class="bg-green">
-
+            <main class="bg-green pull-left">
+                <div class="navbar text-uppercase">
+                    <ul>
+                        <li><a class="active" href="#">in evidenza</a></li>
+                        <li><a class="active" href="#">podcast</a></li>
+                        <li><a class="active" href="#">classifiche</a></li>
+                        <li><a class="active" href="#">generi e mood</a></li>
+                        <li><a class="active" href="#">nuove uscite</a></li>
+                        <li><a class="active" href="#">scopri</a></li>
+                    </ul>
+                </div>
             </main>
             <div class="player bg-grey">
                 <div class="player-left">
