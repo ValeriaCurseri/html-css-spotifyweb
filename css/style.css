@@ -312,7 +312,7 @@ main .raccolte .brano {
     flex-direction: column;
 }
 
-.player-center > .comandi {
+/* .player-center > .comandi {
     height:40px;
     display:flex;
     justify-content: center;
@@ -338,12 +338,45 @@ main .raccolte .brano {
 
 .player-center > .comandi > .comandi-right i.fa-undo-alt {
     transform: scaleX(-1);
+} */
+
+.player-center > .comandi {
+    width: 60%;
+    height:40px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 20px;
+}
+
+.player-center > .comandi i {
+    padding: 0 10px;
+}
+
+.player-center > .comandi > i.fa-play-circle {
+    font-size: 35px;
+    padding: 0 30px;
+    transition: all 0.5s;
+}
+
+.player-center > .comandi > i.fa-play-circle:hover {
+    font-size: 40px;
+    padding: 0 28px;
+}
+
+.player-center > .comandi > i.fa-undo-alt {
+    transform: scaleX(-1);
 }
 
 .player-center > .barra-avanzamento {
     display: flex;
     justify-content: center;
     align-items: center;
+    width:90%;
+}
+
+.player-center > .barra-avanzamento input {
+    margin:0 10px;
 }
 
 .player-center > .barra-avanzamento > span {
@@ -546,5 +579,5 @@ X flex nella navbar del main
 - personalizzare barre di scorrimento Y
 - transition all'hover nel main
 - caricamento del bottone nell'header
-- hover input
+- hover input range nel player
  */
