@@ -280,12 +280,26 @@ main .raccolte .brano {
     display:flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid yellow;
 }
 
 .player-left, .player-right {
     flex: 1 0 25%;
-    justify-content: space-around;
+}
+
+.player-left {
+    justify-content: flex-start;
+}
+
+.player-left div {
+    margin-left: 3%;
+}
+
+.player-right {
+    justify-content: flex-end;
+}
+
+.player-right i, .player-right input {
+    margin-right: 3%;
 }
 
 .player > .player-left > .copertina > img {
@@ -568,8 +582,8 @@ input[type='range']:hover::-webkit-slider-thumb {
 }
 
 /* DA FARE
-/ range inline nel player
-- flex nel player
+X range inline nel player
+X flex nel player
 X hover
 X height
 X responsive
