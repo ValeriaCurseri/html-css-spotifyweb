@@ -264,6 +264,10 @@ main .raccolte .brano {
     margin-bottom:20px;
 }
 
+main .artisti-popolari img, main .artisti-popolari .copertina-overlay{
+    border-radius: 50%;
+}
+
 /* inizio player */
 
 .player {
