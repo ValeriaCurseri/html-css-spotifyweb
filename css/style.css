@@ -325,17 +325,15 @@ main .raccolte .brano {
     padding: 0 10px;
 }
 
-.player-center > .comandi > .comandi-center {
-    font-size: 35px;
-    transition:all 0.5s;
-}
-
-.player-center > .comandi > .comandi-center:hover {
-    font-size: 40px;
-}
-
 .player-center > .comandi > .comandi-center i {
+    font-size: 35px;
     padding: 0 30px;
+    transition: all 0.5s;
+}
+
+.player-center > .comandi > .comandi-center i:hover {
+    font-size: 40px;
+    padding: 0 28px;
 }
 
 .player-center > .comandi > .comandi-right i.fa-undo-alt {
