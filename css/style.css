@@ -148,7 +148,7 @@ header {
     align-items: center;
 }
 
-header > button {
+header .vc_btn {
     background-color: transparent;
     margin-right:10px;
     padding: 7px 25px;
@@ -159,7 +159,7 @@ header > button {
     transition: all 0.5s;
 }
 
-header > button:hover {
+header > .vc_btn:hover {
     padding: 10px 40px;
     font-size: 14px;
 }
@@ -232,7 +232,7 @@ main .raccolte span{
 main > .raccolte .copertina {
     position:relative;
     max-width:250px;
-    transition:all 2s;
+    transition: display 2s;
 }
 
 .copertina-overlay{
@@ -625,7 +625,7 @@ X cambiare contenuti main
 - barra di scorrimento in playlist
 X personalizzare barre di scorrimento Y
 - transition all'hover nel main
-- caricamento del bottone nell'header
+X caricamento del bottone nell'header
 - hover input range nel player
 - bootstrap nel main
  */
