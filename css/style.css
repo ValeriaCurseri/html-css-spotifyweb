@@ -574,7 +574,7 @@ input[type='range']:hover::-webkit-slider-thumb {
 
     .overflow {
         overflow-y: auto;
-        flex:1;
+        height:150px;
     }
 
     aside > .account {
@@ -622,7 +622,7 @@ X height
 X responsive
 X flex nella navbar del main
 X cambiare contenuti main
-- barra di scorrimento in playlist
+X barra di scorrimento in playlist
 X personalizzare barre di scorrimento Y
 - transition all'hover nel main
 X caricamento del bottone nell'header
