@@ -325,6 +325,10 @@ main .artisti-popolari img, main .artisti-popolari .copertina-overlay{
     padding-bottom:5px;
 }
 
+.player > .player-left .titolo.bold-white {
+    margin-top:0;
+}
+
 .player-center {
     flex: 4 0 50%;
     align-items: center;
