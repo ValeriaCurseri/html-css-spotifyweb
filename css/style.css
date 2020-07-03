@@ -53,10 +53,6 @@ li > a {
     font-weight: bold;
 }
 
-/* aside > nav > ul > li:hover a, aside > nav > ul > li:active a, aside > nav > ul > li > a:hover, aside > nav > ul > li > a:active, aside > nav > ul > li > a:focus {
-    color:#fff;
-} */
-
 li:hover a, li:active a, li > a:hover, li > a:active, li > a:focus {
     color:#fff;
     text-decoration: none;
@@ -118,7 +114,7 @@ aside > .playlist {
 aside > .account {
     position:absolute;
     bottom:0;
-    padding:20px;
+    padding:5px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -223,6 +219,36 @@ main .raccolte span{
 
 .dati span {
     display:block;
+}
+
+main > .raccolte .copertina img + i {
+    display:none;
+}
+
+.overlay {
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+}
+
+main > .raccolte .copertina:hover .overlay {
+    display:block;
+}
+
+main > .raccolte .copertina:hover i {
+    display:block;
+    color: #fff;
+    font-size: 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 main .recently-played .dati > .artista {
@@ -399,7 +425,7 @@ input[type='range']::-webkit-slider-thumb {
         margin-right:0;
     }
 
-    aside > nav > ul > li > a > span, aside > .playlist > span {
+    aside > nav > ul > li > a > span, aside > .playlist > .overflow > span {
         font-size: 12px;
         line-height: 30px;
     }
@@ -408,7 +434,7 @@ input[type='range']::-webkit-slider-thumb {
         display:block;
     }
 
-    aside > .playlist > span {
+    aside > .playlist > .overflow > span {
         display:block;
     }
 
@@ -430,8 +456,13 @@ input[type='range']::-webkit-slider-thumb {
         padding-right: 5px;
     }
 
+    .overflow {
+        overflow-y: auto;
+    }
+
     aside > .account {
         display: block;
+
     }
 
     aside > .account i {
@@ -470,6 +501,10 @@ input[type='range']::-webkit-slider-thumb {
 / range inline nel player
 - flex nel player
 - hover
-- flex nella navbar del main
+X height
+X responsive
+X flex nella navbar del main
 - cambiare contenuti main
+- barra di scorrimento in playlist
+- personalizzare barre di scorrimento Y
  */
