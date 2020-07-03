@@ -150,10 +150,17 @@ header {
 header > button {
     background-color: transparent;
     margin-right:10px;
-    padding: 10px 40px;
+    padding: 7px 25px;
     border-radius: 50px;
     border:1px solid #fff;
     color:#fff;
+    font-size:12px;
+    transition: all 0.5s;
+}
+
+header > button:hover {
+    padding: 10px 40px;
+    font-size: 14px;
 }
 
 /* inizio main */
@@ -221,34 +228,30 @@ main .raccolte span{
     display:block;
 }
 
-main > .raccolte .copertina img + i {
+main > .raccolte .copertina {
+    position:relative;
+    transition:all 2s;
+}
+
+.copertina-overlay{
     display:none;
 }
 
-.overlay {
-    display: none; /* Hidden by default */
-    width: 100%; /* Full width (cover the whole page) */
-    height: 100%; /* Full height (cover the whole page) */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
-    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+.copertina:hover .copertina-overlay{
+    display:block;
+    position:absolute;
+    width:100%;
+    height:100%;
+    background-color: rgba(0,0,0,0.5);
 }
 
-main > .raccolte .copertina:hover .overlay {
-    display:block;
-}
-
-main > .raccolte .copertina:hover i {
-    display:block;
-    color: #fff;
-    font-size: 60px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
+.copertina-overlay i{
+    position:absolute;
+    top:50%;
+    left:50%;
     transform: translate(-50%, -50%);
+    color:#fff;
+    font-size:60px;
 }
 
 main .recently-played .dati > .artista {
@@ -294,7 +297,7 @@ main .raccolte .brano {
     flex-direction: column;
 }
 
-.player > .player-left > .dati > .titolo, .player > .player-left > .icone {
+.player > .player-left > .dati > .artista, .player > .player-left > .icone {
     color:grey;
 }
 
@@ -310,6 +313,7 @@ main .raccolte .brano {
 }
 
 .player-center > .comandi {
+    height:40px;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -322,6 +326,11 @@ main .raccolte .brano {
 }
 
 .player-center > .comandi > .comandi-center {
+    font-size: 35px;
+    transition:all 0.5s;
+}
+
+.player-center > .comandi > .comandi-center:hover {
     font-size: 40px;
 }
 
@@ -333,21 +342,21 @@ main .raccolte .brano {
     transform: scaleX(-1);
 }
 
-.player-center > .comandi > .comandi-center > .barra-avanzamento {
+.player-center > .barra-avanzamento {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.player-center > .comandi > .comandi-center > .barra-avanzamento > span {
+.player-center > .barra-avanzamento > span {
     flex: 0 0 5%;
 }
 
-.player-center > .comandi > .comandi-center > .barra-avanzamento > input[range] {
+.player-center > .barra-avanzamento > input[range] {
     flex: 1 1 70px;
     margin: 0 10px;
 }
-/* .player-center > .comandi > .comandi-center > .barra-avanzamento > progress {
+/* .player-center > .barra-avanzamento > progress {
     flex: 1 1 70px;
     margin: 0 10px;
 } */
@@ -378,6 +387,14 @@ input[type='range']::-webkit-slider-thumb {
   cursor: ew-resize;
   background: #fff;
   box-shadow: -80px 0 0 80px #fff;
+}
+
+.player a {
+    color:grey;
+}
+
+.player a:hover {
+    color:#fff;
 }
 
 /* MEDIA QUERIES */
@@ -456,6 +473,15 @@ input[type='range']::-webkit-slider-thumb {
         padding-right: 5px;
     }
 
+    aside > .playlist a, aside > .account a {
+        color:grey;
+    }
+
+    aside > .playlist a:hover, aside > .account a:hover {
+        color:#fff;
+        text-decoration: none;
+    }
+
     .overflow {
         overflow-y: auto;
     }
@@ -507,4 +533,6 @@ X flex nella navbar del main
 - cambiare contenuti main
 - barra di scorrimento in playlist
 - personalizzare barre di scorrimento Y
+- transition all'hover nel main
+- caricamento del bottone nell'header
  */
