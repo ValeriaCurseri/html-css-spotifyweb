@@ -387,6 +387,19 @@ input[type='range']::-webkit-slider-thumb {
   box-shadow: -80px 0 0 80px #fff;
 }
 
+/* input[type='range']:hover::-webkit-slider-runnable-track {
+  height: 5px;
+  color: #35ff14;
+  margin-top: -1px;
+}
+
+input[type='range']:hover::-webkit-slider-thumb {
+  width: 5px;
+  height: 5px;
+  background: #fff;
+  box-shadow: -80px 0 0 80px #fff;
+} */
+
 .player a {
     color:grey;
 }
@@ -524,7 +537,7 @@ input[type='range']::-webkit-slider-thumb {
 /* DA FARE
 / range inline nel player
 - flex nel player
-- hover
+X hover
 X height
 X responsive
 X flex nella navbar del main
@@ -533,4 +546,5 @@ X flex nella navbar del main
 - personalizzare barre di scorrimento Y
 - transition all'hover nel main
 - caricamento del bottone nell'header
+- hover input
  */
