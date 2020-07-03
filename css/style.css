@@ -91,6 +91,7 @@ aside span {
 aside > nav > ul > li {
     display:flex;
     justify-content: center;
+    border-left:2px solid transparent;
 }
 
 aside > nav > ul > li > a > i {
@@ -230,6 +231,7 @@ main .raccolte span{
 
 main > .raccolte .copertina {
     position:relative;
+    max-width:250px;
     transition:all 2s;
 }
 
@@ -455,6 +457,28 @@ input[type='range']:hover::-webkit-slider-thumb {
     color:#fff;
 }
 
+/* scroll bar */
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 /* MEDIA QUERIES */
 
 @media screen and (min-width:768px) { /* SM */
@@ -542,6 +566,7 @@ input[type='range']:hover::-webkit-slider-thumb {
 
     .overflow {
         overflow-y: auto;
+        flex:1;
     }
 
     aside > .account {
@@ -590,8 +615,9 @@ X responsive
 X flex nella navbar del main
 - cambiare contenuti main
 - barra di scorrimento in playlist
-- personalizzare barre di scorrimento Y
+X personalizzare barre di scorrimento Y
 - transition all'hover nel main
 - caricamento del bottone nell'header
 - hover input range nel player
+- bootstrap nel main
  */
